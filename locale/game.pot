@@ -1,0 +1,58 @@
+# LANGUAGE translation for Threadbare Dialogue DM for the following files:
+# res://dialogue/test.dialogue
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Threadbare Dialogue DM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: dialogue/test.dialogue
+msgctxt "dialogue"
+msgid "Player"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgctxt "dialogue"
+msgid "Guard"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Hi! I'm looking for a way out of this cave."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "You'll need light! The way out is, ironically, going deeper into the mountain."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "I don't have a lantern. What do I do?"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Maybe you could use that yarn you have there."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "I can't use it for fire! This is a special kind of yarn."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Isn't all yarn special here? Sometimes, you have to give a little to take a little..."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Ok, I'll use this much"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "NO! I won't use this yarn"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Here you go."
+msgstr ""

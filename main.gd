@@ -1,6 +1,7 @@
 extends Node2D
 
 const TEST = preload("res://dialogue/test.dialogue")
+
 @onready var fire_light: PointLight2D = %FireLight
 @onready var npc: AnimatedSprite2D = %NPC
 

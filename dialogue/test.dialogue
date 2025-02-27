@@ -6,5 +6,11 @@ Guard: Maybe you could use that yarn you have there.
 - I can't use it for fire! This is a special kind of yarn.
 Guard: Isn't all yarn special here? Sometimes, you have to give a little to take a little...
 - Ok, I'll use this much
+	=> give_fire
 - NO! I won't use this yarn
+	=> END
+
+~ give_fire
+do give_fire()
+Guard: [#waving-torch] Here you go.
 => END

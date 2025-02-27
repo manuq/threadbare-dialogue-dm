@@ -253,7 +253,13 @@ tile_set = SubResource("TileSet_7udsh")
 [node name="Player" parent="World" instance=ExtResource("6_a65di")]
 position = Vector2(324, 267)
 
+[node name="FireLight" parent="World/Player" instance=ExtResource("9_77bnv")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-13, -19)
+
 [node name="NPC" parent="World" instance=ExtResource("7_f7a5s")]
+unique_name_in_owner = true
 position = Vector2(449, 265)
 
 [node name="FireLight" parent="World/NPC" instance=ExtResource("9_77bnv")]

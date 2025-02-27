@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://cmkb0ud0johqy"]
+[gd_scene load_steps=35 format=3 uid="uid://cmkb0ud0johqy"]
 
 [ext_resource type="Texture2D" uid="uid://2112a3tv1dqq" path="res://assets/tiny-swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="1_u3kyy"]
+[ext_resource type="Script" path="res://npc.gd" id="2_rdiwg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvrjh"]
 atlas = ExtResource("1_u3kyy")
@@ -251,11 +252,34 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clghv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a4hy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eodaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw4yc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewsbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppasi")
+}],
+"loop": false,
+"name": &"wave",
+"speed": 10.0
 }]
 
 [node name="NPC" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_hgvyx")
-animation = &"idle"
+animation = &"wave"
 autoplay = "idle"
-frame_progress = 0.755681
 flip_h = true
+script = ExtResource("2_rdiwg")

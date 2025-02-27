@@ -5,3 +5,6 @@
 # From Tiny Swords pack
 .DS_Store
 
+# Ignore exported game
+/exports/*
+!/exports/.gdignore

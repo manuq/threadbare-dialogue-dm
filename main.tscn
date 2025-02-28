@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dslom0xbe1if7" path="res://assets/tiny-swords/Terrain/Ground/Shadows.png" id="5_al3nb"]
 [ext_resource type="Texture2D" uid="uid://bx0rjuka8krb5" path="res://assets/tiny-swords/Terrain/Ground/Tilemap_Elevation.png" id="5_uhan6"]
 [ext_resource type="PackedScene" uid="uid://bcaoj1fi6yb6a" path="res://scenes/player.tscn" id="6_a65di"]
-[ext_resource type="PackedScene" uid="uid://cmkb0ud0johqy" path="res://npc.tscn" id="7_f7a5s"]
+[ext_resource type="PackedScene" uid="uid://cmkb0ud0johqy" path="res://scenes/npc.tscn" id="7_f7a5s"]
 [ext_resource type="PackedScene" uid="uid://cn3plxbyyxjs7" path="res://scenes/fire_light.tscn" id="9_77bnv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2e30"]
@@ -250,24 +250,28 @@ tile_set = SubResource("TileSet_bcjqk")
 tile_map_data = PackedByteArray("AAADAAQAAAAJAAAAAAACAAQAAAAJAAAAAAABAAQAAAAJAAAAAAAIAAQAAAAJAAAAAAAEAAIAAAAJAAAAAAAFAAIAAAAJAAAAAAAGAAIAAAAJAAAAAAAHAAIAAAAJAAAAAAAIAAIAAAAJAAAAAAA=")
 tile_set = SubResource("TileSet_7udsh")
 
-[node name="Player" parent="World" instance=ExtResource("6_a65di")]
+[node name="Elements" type="Node2D" parent="World"]
+y_sort_enabled = true
+
+[node name="Player" parent="World/Elements" instance=ExtResource("6_a65di")]
 position = Vector2(324, 267)
 
-[node name="FireLight" parent="World/Player" instance=ExtResource("9_77bnv")]
+[node name="FireLight" parent="World/Elements/Player" instance=ExtResource("9_77bnv")]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-13, -19)
 
-[node name="NPC" parent="World" instance=ExtResource("7_f7a5s")]
+[node name="Camera2D" type="Camera2D" parent="World/Elements/Player"]
+position = Vector2(76, -4)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="NPC" parent="World/Elements" instance=ExtResource("7_f7a5s")]
 unique_name_in_owner = true
 position = Vector2(449, 265)
 
-[node name="FireLight" parent="World/NPC" instance=ExtResource("9_77bnv")]
+[node name="FireLight" parent="World/Elements/NPC" instance=ExtResource("9_77bnv")]
 position = Vector2(32, -23)
-
-[node name="Camera2D" type="Camera2D" parent="World"]
-position = Vector2(400, 263)
-zoom = Vector2(2, 2)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
 environment = SubResource("Environment_4mryp")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cm3d654en65yh"]
+[gd_scene load_steps=26 format=4 uid="uid://cm3d654en65yh"]
 
 [ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="1_7fesx"]
 [ext_resource type="Script" path="res://main.gd" id="1_7k12v"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bcaoj1fi6yb6a" path="res://scenes/player.tscn" id="6_a65di"]
 [ext_resource type="PackedScene" uid="uid://cmkb0ud0johqy" path="res://scenes/npc.tscn" id="7_f7a5s"]
 [ext_resource type="PackedScene" uid="uid://cn3plxbyyxjs7" path="res://scenes/fire_light.tscn" id="9_77bnv"]
+[ext_resource type="Resource" uid="uid://bfu4osg8erti7" path="res://dialogue/guard2.dialogue" id="10_jd1t2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2e30"]
 texture = ExtResource("1_u86gh")
@@ -193,7 +194,7 @@ sources/0 = SubResource("TileSetAtlasSource_nidxt")
 
 [sub_resource type="Gradient" id="Gradient_mqf3o"]
 offsets = PackedFloat32Array(0.00600601, 1)
-colors = PackedColorArray(1.08294e-07, 7.21961e-08, 0.279022, 1, 0.923246, 0.950523, 0.987045, 1)
+colors = PackedColorArray(1.08294e-07, 7.21961e-08, 0.279022, 1, 0.910457, 0.942288, 0.984887, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_7qigj"]
 gradient = SubResource("Gradient_mqf3o")
@@ -204,9 +205,7 @@ glow_intensity = 3.31
 glow_bloom = 0.09
 glow_hdr_scale = 1.46
 adjustment_enabled = true
-adjustment_brightness = 0.9
-adjustment_contrast = 0.9
-adjustment_saturation = 0.8
+adjustment_saturation = 0.9
 adjustment_color_correction = SubResource("GradientTexture1D_7qigj")
 
 [node name="Main" type="Node2D"]
@@ -259,7 +258,6 @@ position = Vector2(324, 267)
 [node name="FireLight" parent="World/Elements/Player" instance=ExtResource("9_77bnv")]
 unique_name_in_owner = true
 visible = false
-position = Vector2(-13, -19)
 
 [node name="Camera2D" type="Camera2D" parent="World/Elements/Player"]
 position = Vector2(76, -4)
@@ -271,6 +269,15 @@ unique_name_in_owner = true
 position = Vector2(449, 265)
 
 [node name="FireLight" parent="World/Elements/NPC" instance=ExtResource("9_77bnv")]
+position = Vector2(32, -23)
+
+[node name="NPC2" parent="World/Elements" instance=ExtResource("7_f7a5s")]
+unique_name_in_owner = true
+position = Vector2(181, 326)
+dialogue = ExtResource("10_jd1t2")
+look_right = true
+
+[node name="FireLight" parent="World/Elements/NPC2" instance=ExtResource("9_77bnv")]
 position = Vector2(32, -23)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World"]

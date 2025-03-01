@@ -17,41 +17,135 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: dialogue/test.dialogue
-msgctxt "dialogue"
-msgid "Player"
-msgstr "Jugador"
+#: scenes/interact_label.tscn
+msgid "Talk"
+msgstr "Hablar"
 
-#: dialogue/test.dialogue
+#: dialogue/guard2.dialogue dialogue/guard1.dialogue
 msgctxt "dialogue"
 msgid "Guard"
 msgstr "Guardia"
 
-#: dialogue/test.dialogue
+#: dialogue/guard2.dialogue dialogue/guard1.dialogue
+msgctxt "dialogue"
+msgid "Player"
+msgstr "Jugador"
+
+#: dialogue/guard2.dialogue
+msgid "Stop!"
+msgstr "¡Alto!"
+
+#: dialogue/guard2.dialogue
+msgid "Oh wait, you have a lantern! Please proceed."
+msgstr "Un momento, ¡tienes una linterna! Procede por favor."
+
+#: dialogue/guard2.dialogue
+msgid "I'm looking for a way out of this cave."
+msgstr "Estoy buscando una manera de salir de esta cueva."
+
+#: dialogue/guard2.dialogue
+msgid "I can't let you go. From here the cave becomes very dark."
+msgstr ""
+"No puedo dejarte pasar. A partir de aquí la cueva se vuelve muy oscura."
+
+#: dialogue/guard2.dialogue
+msgid "Please!"
+msgstr "¡Por favor!"
+
+#: dialogue/guard2.dialogue
+msgid "Is there anything I can give you to let me continue?"
+msgstr "¿Hay algo que te pueda dar para que me dejes continuar?"
+
+#: dialogue/guard2.dialogue
+msgid ""
+"Wait... is that [wave amp=25 freq=5]yarn[/wave]? If you give me some I may "
+"help you."
+msgstr ""
+"Espera... ¿es eso [wave amp=25 freq=5]hilo[/wave]? Si me das un poco podría "
+"ayudarte."
+
+#: dialogue/guard2.dialogue dialogue/guard1.dialogue
+msgid "I don't have any yarn left!"
+msgstr "¡Ya no me queda hilo!"
+
+#: dialogue/guard2.dialogue
+msgid "Ok but just this little bit"
+msgstr "Bueno pero sólo este poquito"
+
+#: dialogue/guard2.dialogue
+msgid "No way!"
+msgstr "¡De ninguna manera!"
+
+#: dialogue/guard2.dialogue
+msgid "There is someone else around who can help you. Go talk with them!"
+msgstr "Hay alguien alrededor que puede ayudarte. ¡Ve y habla con él!"
+
+#: dialogue/guard2.dialogue
+msgid "You have scammed me! You said YOU would help me!"
+msgstr "¡Me has estafado ! ¡Dijiste que TÚ me ayudarías!"
+
+#: dialogue/guard2.dialogue
+msgid "Bah!"
+msgstr "¡Bah!"
+
+#: dialogue/guard2.dialogue
+msgid "The other guard has fire. Go talk with them!"
+msgstr "El otro guardia tiene fuego. ¡Ve y habla con él!"
+
+#: dialogue/guard2.dialogue
+msgid "You have scammed me again! I could have figured it out myself!"
+msgstr "¡Me has estafado nuevamente! ¡Me podría haber dado cuenta yo mismo!"
+
+#: dialogue/guard2.dialogue
+msgid ""
+"Ask the other guard to exchange some of your yarn for a lantern. Then I will "
+"let you pass."
+msgstr ""
+"Pídele al otro guardia que te de una linterna a cambio de un poco de hilo. "
+"Luego te dejaré pasar."
+
+#: dialogue/guard2.dialogue
+msgid "You have scammed me once again! I could have figured it out myself!"
+msgstr "¡Me has estafado una vez más! ¡Me podría haber dado cuenta yo mismo!"
+
+#: dialogue/guard2.dialogue
+msgid "If you give me some if your yarn I may help you."
+msgstr "Si me das un poco de tu hilo quizá podría ayudarte."
+
+#: dialogue/guard2.dialogue
+msgid "Give me all your yarn, please?"
+msgstr "Dame todo tu hilo, ¿por favor?"
+
+#: dialogue/guard2.dialogue
+msgid "NO"
+msgstr "NO"
+
+#: dialogue/guard1.dialogue
 msgid "Hi! I'm looking for a way out of this cave."
 msgstr "¡Hola! Estoy buscando una manera de salir de esta cueva."
 
-#: dialogue/test.dialogue
+#: dialogue/guard1.dialogue
 msgid ""
 "You'll need light! The way out is, ironically, going deeper into the "
 "mountain."
 msgstr ""
-"¡Necesitarás luz! La salida es, irónicamente, adentrándose más en la "
-"montaña."
+"¡Necesitarás luz! La salida es, irónicamente, adentrándose más en la montaña."
 
-#: dialogue/test.dialogue
+#: dialogue/guard1.dialogue
 msgid "I don't have a lantern. What do I do?"
 msgstr "No tengo linterna ¿Qué hago?"
 
-#: dialogue/test.dialogue
-msgid "Maybe you could use that yarn you have there."
-msgstr "Quizás podrías usar ese hilo que tienes ahí."
+#: dialogue/guard1.dialogue
+msgid ""
+"Maybe you could use that [wave amp=25 freq=5]yarn[/wave] you have there."
+msgstr ""
+"Quizás podrías usar ese [wave amp=25 freq=5]hilo[/wave] que tienes ahí."
 
-#: dialogue/test.dialogue
+#: dialogue/guard1.dialogue
 msgid "I can't use it for fire! This is a special kind of yarn."
 msgstr "¡No puedo usarlo para hacer fuego! Este es un tipo especial de hilo."
 
-#: dialogue/test.dialogue
+#: dialogue/guard1.dialogue
 msgid ""
 "Isn't all yarn special here? Sometimes, you have to give a little to take a "
 "little..."
@@ -59,14 +153,37 @@ msgstr ""
 "¿No es especial todo el hilo que hay aquí? A veces, hay que ceder un poco "
 "para recibir un poco..."
 
-#: dialogue/test.dialogue
-msgid "Ok, I'll use this much"
-msgstr "Ok, usaré este tanto"
+#: dialogue/guard1.dialogue
+msgid "I could burn some of your yarn so you can have a lantern. Ready?"
+msgstr "Podría quemar un poco de tu hilo para que tengas una linterna ¿Listo?"
 
-#: dialogue/test.dialogue
+#: dialogue/guard1.dialogue
+msgid "Ok, I'll use this much"
+msgstr "Bueno, usaré este tanto"
+
+#: dialogue/guard1.dialogue
 msgid "NO! I won't use this yarn"
 msgstr "¡NO! No usaré este hilo"
 
-#: dialogue/test.dialogue
+#: dialogue/guard1.dialogue
 msgid "Here you go."
 msgstr "Aquí tienes."
+
+#: dialogue/guard1.dialogue
+msgid "Glad to help."
+msgstr "Un placer ayudar."
+
+#: dialogue/guard1.dialogue
+msgid "At your service."
+msgstr "A tu servicio."
+
+#: dialogue/guard1.dialogue
+msgid ""
+"You have a lantern now! You can still give me more yarn to light it better..."
+msgstr ""
+"¡Ahora tienes una linterna! Todavía me puedes dar más hilo para encenderla "
+"mejor..."
+
+#: dialogue/guard1.dialogue
+msgid "Still here?"
+msgstr "¿Todavía aquí?"

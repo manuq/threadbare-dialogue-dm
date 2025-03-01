@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export_range(10, 10000, 10) var SPEED = 12000.0
 @export_range(10, 10000, 10) var RUN_SPEED = 24000.0
+
 @onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 @onready var interact: Node2D = %Interact
 

@@ -1,0 +1,46 @@
+~ start
+Guard: Stop!
+if inventory.get("fire") > 0
+	Guard: Oh wait, you have a lantern! Please proceed.
+	=> END
+if events.get("talked to guard 2", false)
+	=> talk_again
+
+Player: I'm looking for a way out of this cave.
+Guard: I can't let you go. From here the cave becomes very dark.
+- Please!
+- Is there anything I can give you to let me continue?
+Guard: Wait... is that [wave amp=25 freq=5]yarn[/wave]? If you give me some I may help you.
+set events["talked to guard 2"] = true
+~ check_yarn
+if inventory["yarn"] <= 0
+	Player: I don't have any yarn left!
+	=> END
+- Ok but just this little bit
+- No way!
+	=> END
+
+if not events.get("guard 2 hinted player once", false)
+	Guard: There is someone else around who can help you. Go talk with them!
+	Player: You have scammed me! You said YOU would help me!
+	Guard: Bah!
+	set events["guard 2 hinted player once"] = true
+elif not events.get("guard 2 hinted player twice", false)
+	Guard: The other guard has fire. Go talk with them!
+	Player: You have scammed me again! I could have figured it out myself!
+	Guard: Bah!
+	set events["guard 2 hinted player twice"] = true
+elif not events.get("guard 2 hinted player 3 times", false)
+	Guard: Ask the other guard to exchange some of your yarn for a lantern. Then I will let you pass.
+	Player: You have scammed me once again! I could have figured it out myself!
+	Guard: Bah!
+	set events["guard 2 hinted player 3 times"] = true
+=> END
+
+~ talk_again
+if not events.get("guard 2 hinted player 3 times", false)
+	Guard: If you give me some if your yarn I may help you.
+	=> check_yarn
+Guard: Give me all your yarn, please?
+Player: NO
+=> END

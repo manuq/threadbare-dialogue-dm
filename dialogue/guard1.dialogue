@@ -7,7 +7,7 @@ Guard: You'll need light! The way out is, ironically, going deeper into the moun
 - I don't have a lantern. What do I do?
 Guard: Maybe you could use that [wave amp=25 freq=5]yarn[/wave] you have there.
 - I can't use it for fire! This is a special kind of yarn.
-~ offer
+~ offer_lantern
 if not events.get("talked to guard 1", false)
 	Guard: Isn't all yarn special here? Sometimes, you have to give a little to take a little...
 else
@@ -18,24 +18,23 @@ if inventory["yarn"] <= 0
 	Player: I don't have any yarn left!
 	=> END
 - Ok, I'll use this much
-	=> give_fire
+	=> give_lantern
 - NO! I won't use this yarn
 	=> END
 
-~ give_fire
+~ give_lantern
 do inventory["yarn"] -= 20
-do inventory["fire"] += 20
-do give_fire()
+set events["got lantern"] = true
+do got_lantern()
 % Guard: [#waving-torch] Here you go.
 % Guard: [#waving-torch] Glad to help.
 % Guard: [#waving-torch] At your service.
 => END
 
 ~ talk_again
-if inventory.get("fire") > 0
+if events.get("got lantern", false)
 	Guard: You have a lantern now! You can still give me more yarn to light it better...
 	=> check_yarn
 else
 	Guard: Still here?
-	=> offer
-
+	=> offer_lantern

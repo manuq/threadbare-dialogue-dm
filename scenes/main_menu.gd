@@ -2,17 +2,10 @@ extends CanvasLayer
 
 @onready var v_box_container: VBoxContainer = %VBoxContainer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed(&"ui_cancel"):
 		var current_scene = Engine.get_main_loop().current_scene
-		var balloon: CanvasLayer = current_scene.get_node("DialogueBalloon")
-		if balloon:
+		if current_scene.has_node("DialogueBalloon"):
 			return
 		_on_back()
 
@@ -32,10 +25,12 @@ func _on_button_back_pressed() -> void:
 
 
 func _on_button_new_pressed() -> void:
+	GameState.new_file()
 	var scene_tree = Engine.get_main_loop() as SceneTree
 	scene_tree.reload_current_scene()
 
 
 func _on_button_quit_pressed() -> void:
+	GameState.save_file()
 	var scene_tree = Engine.get_main_loop() as SceneTree
 	scene_tree.quit()

@@ -1,6 +1,6 @@
 ~ start
 Guard: Stop!
-if inventory.get("fire") > 0
+if events.get("got lantern", false)
 	Guard: Oh wait, you have a lantern! Please proceed.
 	=> END
 if events.get("talked to guard 2", false)

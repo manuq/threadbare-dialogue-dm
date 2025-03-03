@@ -43,5 +43,6 @@ func _process(delta: float) -> void:
 	_process_interact(delta)
 
 func _on_interaction_ended():
+	interact_ray.get_collider().interaction_ended.disconnect(_on_interaction_ended)
 	await get_tree().create_timer(0.5).timeout
 	interacting = false

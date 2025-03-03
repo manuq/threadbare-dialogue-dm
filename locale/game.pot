@@ -2,6 +2,7 @@
 # res://scenes/interact_label.tscn
 # res://dialogue/guard2.dialogue
 # res://dialogue/guard1.dialogue
+# res://scenes/main_menu.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -164,4 +165,16 @@ msgstr ""
 
 #: dialogue/guard1.dialogue
 msgid "Still here?"
+msgstr ""
+
+#: scenes/main_menu.tscn
+msgid "Back"
+msgstr ""
+
+#: scenes/main_menu.tscn
+msgid "New"
+msgstr ""
+
+#: scenes/main_menu.tscn
+msgid "Quit"
 msgstr ""

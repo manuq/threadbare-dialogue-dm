@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://cm3d654en65yh"]
+[gd_scene load_steps=50 format=4 uid="uid://cm3d654en65yh"]
 
 [ext_resource type="Texture2D" uid="uid://bn7exo0rmv6ke" path="res://assets/tiny-swords/Terrain/Ground/Tilemap_Flat.png" id="1_7fesx"]
 [ext_resource type="Script" path="res://main.gd" id="1_7k12v"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cn3plxbyyxjs7" path="res://scenes/fire_light.tscn" id="9_77bnv"]
 [ext_resource type="Resource" uid="uid://bfu4osg8erti7" path="res://dialogue/guard2.dialogue" id="10_jd1t2"]
 [ext_resource type="Texture2D" uid="uid://djf664b6rsabh" path="res://assets/tiny-swords/Factions/Goblins/Troops/TNT/Purple/TNT_Purple.png" id="11_8qcpb"]
+[ext_resource type="PackedScene" uid="uid://bpulxvf3qq4o6" path="res://scenes/main_menu.tscn" id="12_jieo1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2e30"]
 texture = ExtResource("1_u86gh")
@@ -439,7 +440,6 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="World/Elements/Player"]
-position = Vector2(76, -4)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
@@ -465,5 +465,8 @@ environment = SubResource("Environment_4mryp")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="World"]
 color = Color(0.74978, 0.74978, 0.74978, 1)
+
+[node name="MainMenu" parent="." instance=ExtResource("12_jieo1")]
+visible = false
 
 [editable path="World/Elements/NPC2"]

@@ -187,3 +187,15 @@ msgstr ""
 #: dialogue/guard1.dialogue
 msgid "Still here?"
 msgstr "¿Todavía aquí?"
+
+#: scenes/main_menu.tscn
+msgid "Back"
+msgstr "Volver"
+
+#: scenes/main_menu.tscn
+msgid "New"
+msgstr "Nuevo"
+
+#: scenes/main_menu.tscn
+msgid "Quit"
+msgstr "Salir"

@@ -19,6 +19,7 @@ if inventory["yarn"] <= 0
 - Ok but just this little bit
 - No way!
 	=> END
+do inventory["yarn"] -= 20
 
 if not events.get("guard 2 hinted player once", false)
 	Guard: There is someone else around who can help you. Go talk with them!

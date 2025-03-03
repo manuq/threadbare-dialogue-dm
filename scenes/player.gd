@@ -11,8 +11,8 @@ func _process(delta: float) -> void:
 		return
 
 	var axis:Vector2 = Vector2(
-		Input.get_axis(&"move_left", &"move_right"),
-		Input.get_axis(&"move_up", &"move_down")
+		Input.get_axis(&"ui_left", &"ui_right"),
+		Input.get_axis(&"ui_up", &"ui_down"),
 	)
 
 	if Input.is_action_pressed(&"running"):

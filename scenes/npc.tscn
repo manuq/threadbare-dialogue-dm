@@ -1,8 +1,8 @@
 [gd_scene load_steps=39 format=3 uid="uid://cmkb0ud0johqy"]
 
 [ext_resource type="Texture2D" uid="uid://2112a3tv1dqq" path="res://assets/tiny-swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="1_u3kyy"]
-[ext_resource type="Script" path="res://scenes/npc.gd" id="2_rdiwg"]
-[ext_resource type="Script" path="res://scenes/interact_area.gd" id="3_aubf5"]
+[ext_resource type="Script" uid="uid://cxiog16l2g37m" path="res://scenes/npc.gd" id="2_rdiwg"]
+[ext_resource type="Script" uid="uid://mtg8ddwdciwv" path="res://scenes/interact_area.gd" id="3_aubf5"]
 [ext_resource type="Resource" uid="uid://bspnd7yuf564w" path="res://dialogue/guard1.dialogue" id="4_p81bs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvrjh"]
